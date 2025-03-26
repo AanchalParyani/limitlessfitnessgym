@@ -9,6 +9,7 @@
       name="description"
       content="Limitless Fitness Gym"
     />
+    <title>Limitless Fitness Gym</title>
   </head>
   <body>
     <!-- add a skip link that skips to the main content -->
@@ -47,7 +48,6 @@
       <!-- add alt text where necessary -->
       <!-- add responsive images for resolution switching -->
       <picture>
-        
         <source
           media="(min-width:320px)"
           srcset="images/facility-320w.jpg"
@@ -124,7 +124,17 @@
         </ul>
         <!-- add alt text where necessary -->
         <!-- add responsive images for resolution switching -->
-        src="images/classes.jpg"
+        <picture>
+          <source
+            media="(min-width:320px)"
+            srcset="images/classes-320w.jpg"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="images/classes-768w.jpg"
+          />
+          <img src="images/classes.jpg" alt="classes" />
+        </picture>
       </section>
       <section>
         <h2>Personal Training</h2>
@@ -137,7 +147,17 @@
         <a href="#">Book a Free Consultation today!</a>
         <!-- add alt text where necessary -->
         <!-- add responsive images for resolution switching -->
-        src="images/dumbells.jpg"
+        <picture>
+          <source
+            media="(min-width:320px)"
+            srcset="images/dumbells-320w.jpg"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="images/dumbells-768w.jpg"
+          />
+          <img src="images/dumbells.jpg" alt="facility" />
+        </picture>
       </section>
       <section>
         <h2>Membership Options</h2>
@@ -159,9 +179,23 @@
           <h3>Join Limitless Fitness Today!</h3>
           <p>Fill out the form below to kickstart your fitness journey:</p>
           <!--add accessibility to the form-->
-          Full Name Email Address Phone Number Membership Type Select a
-          Membership Option Monthly Membership Annual Membership Family & Group
-          Plans Tell us about your fitness goals: Submit
+          <form>
+            <label for="fullName">Full Name:</label>
+            <input id="fullName" type="text" /><br/><br/>
+            <label for="email">Email Address: </label>
+            <input id="email" type="email" /><br/><br/>
+            <label for="phnNo">Phone Number</label>
+            <input id="phnNo" type="tel" /><br/><br/>
+            <fieldset>
+              <legend>Membership Type - Select a membership option:</legend>
+              <input name="membership" type="radio" id="monthly" /><label for="monthly">Monthly Membership</label>
+              <input name="membership" type="radio" id="annual" /><label for="annual">Annual Membership</label>
+              <input name="membership" type="radio" id="fgp" /><label for="fgp">Family & Group Plans</label>
+            </fieldset>
+            <label for="fitnessGoals">Tell us about your fitness goals:</label><br/>
+            <textarea id="fitnessGoals"></textarea><br/><br/>
+            <input name="Submit" type="submit" id="submit">
+          </form>
         </section>
       </section>
     </main>
@@ -179,7 +213,7 @@
     </aside>
     <footer>
       <section>
-        Stay connected
+        <h2>Stay connected</h2>
         <ul>
           <li>
             <svg
@@ -226,7 +260,7 @@
         </ul>
       </section>
       <section>
-        Contact Us
+        <h2>Contact Us</h2>
         <address>
           <p>
             1234 HIIT St. <br />
